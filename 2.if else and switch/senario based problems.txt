@@ -1,0 +1,753 @@
+//electricity bill
+
+#include<stdio.h>
+int main()
+{ 
+    float unit;
+    printf("Enter the units: ");
+    scanf("%f",&unit);
+    if(unit<=50) printf("Total electricity bill: Rs.%.2f",((unit*0.50)+(0.2*(unit*0.50))));
+
+    if(unit>50 && unit<=150) printf("Total electricity bill: Rs.%.2f",(((unit-50)0.75)+(50*0.50))+(0.2(((unit-50)*0.75)+(50*0.50))));
+
+    if(unit>150 && unit<=250) printf("Total electricity bill: Rs.%.2f",(((100*0.75)+(50*0.50)+((unit-150)1.20))+(0.2((100*0.75)+(50*0.50)+(unit-150)*1.20))));
+
+    if(unit>250) printf("Total electricity bill: Rs.%.2f",((((100*0.75)+(50*0.50)+(100*1.20)+((unit-250)1.50)))+(0.2((100*0.75)+(50*0.50)+(100*1.20)+((unit-250)*1.50)))));
+
+    return 0;
+}
+
+
+// Online C compiler to run C program online
+#include<stdio.h>
+int main()
+{
+    char nation,gender;
+    int age;
+    printf("Enter Nationality(I for Indian, i for Indian): \n");
+    scanf(" %c",&nation);
+    printf("Enter your gender(M for male, F for female): \n");
+     scanf(" %c",&gender);
+    printf("Enter your age: \n");
+    scanf("%d",&age);
+    
+    if(nation=='i'||nation=='I'){
+        if(gender=='M'||gender=='m'){
+            if(age>=21 && age<=50){
+                printf("Congratulation! you are eligible for marriage");
+            }else{
+                printf("Sorry! you are not eligible for marriage");
+            }
+        }
+    else if(gender=='f'||gender=='F'){
+            if(age>=18 && age<=45){
+                printf("Congratulation! you are eligible for marriage");
+            }else{
+                printf("Sorry! you are not eligible for marriage");
+            }
+        }
+        else printf("Invalid Entry");
+    }
+    return 0;
+}
+
+
+
+//service center
+
+#include<stdio.h>
+int main()
+{
+    char vname[20], owner[21];
+    int svno, tyre,vtype,age;
+    printf("Enter your name: ");
+    fgets(owner,21,stdin);
+    printf("Enter your vehicle name: ");
+    fgets(vname,20,stdin);
+    printf("Enter your vehicle type (2 for 2-wheeler, 3 for 3-wheeler, 4 for 4-wheeler): ");
+    scanf("%d",&vtype);
+    if(vtype!=2&&vtype!=3&&vtype!=4){
+    printf("\n This service center is not accepting other than 2 wheeler, 3 wheeler and 4 wheeler");
+     goto abc;
+} 
+    printf("Enter the age of your vehicle (in months): ");
+    scanf("%d",&age);
+    if(age<=8) {printf ("your vehicle servie will done after a while");}
+    
+
+if((vtype==2||vtype==3||vtype==4)&&age>8 ){
+    
+    printf("Select the type of issue:\n
+1) Enter 1 for tyre problem\n
+2) Enter 2 for fuel problem\n
+3) Enter 3 for engine issue\n
+4) Enter 4 for general services");
+scanf("%d",&svno);
+
+
+printf("----- Bill -----\nName of the owner: %s\nName of the vehicle: %s\n",owner,vname);
+
+
+
+switch(svno){
+    case 1:
+    printf("How many tyres are you facing the issue with?: ");
+    scanf("%d",&tyre);
+    printf("Issue: Tyre problem\n");
+    printf("Bill: Rs. %.2f",(float)tyre*400); break;
+
+    case 2:
+        printf("Issue: Fuel problem\n");
+    printf("Bill: Rs. %.2f",1500.000); break;
+    
+
+    case 3:
+        printf("Issue: engine issue\n");
+    printf("Bill: Rs. %.2f",5000.000); break;
+    
+
+    case 4:
+        printf("Issue: general issue\n");
+    printf("Bill: Rs. %.2f",1000.000); break;
+    
+    default:
+    
+        printf("Invalid");
+    break;
+
+}
+}
+
+
+   abc: return 0;
+}
+
+
+
+
+//triangle
+
+// Online C compiler to run C program online
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    printf("Enter the lengths of the sides of the triangle: \n");
+    printf("Side 1: ");
+    scanf( "%d",&a);
+    printf("Side 2: ");
+    scanf( "%d",&b);
+    printf("Side 3: ");
+    scanf( "%d",&c);
+     if(a==b && b==c) printf("The triangle is equilateral.");
+     else if((a!=b||a==c)||(a==b||b!=c)) printf("The triangle is an isosceles triangle.");
+     else if(a!=b&&b!=c) printf("The triangle is a scalene triangle.");
+     
+     return 0;
+}
+
+3/7/24
+
+//Park theme
+// Online C compiler to run C program online
+#include<stdio.h>
+int main()
+{
+    int age; float height,amt; char vip;
+
+    a:printf("Enter your age: \n");
+    scanf("%d",&age);
+    if(age<=0) {printf("Error! Please enter your age again\n");  goto a;}
+    b:printf("Enter your height in cm: \n");
+    scanf("%f",&height);
+    if (height<=0) {printf("Error! Please enter your height again\n"); goto b;}
+    printf("Have you got vip pass: \n");
+    scanf(" %c",&vip);
+    if(age<=3) {printf("You got free ticket.\n");}
+    else if(age>=4&&age<=12) {printf("You have to pay Rs.20.\n"); amt=20;}
+    else if(age>=13&&age<=64) {printf("You have to pay Rs.100.\n");amt=100;}
+    else if(age>=65) {printf("You have to pay Rs.50.\n");amt=50;}
+   
+  
+  if(height>180) {printf("You have to pay Extra 50rs.\n");amt+=50;}
+  else if(height>=120||height<=180){printf("no additional charge\n");}
+  else if(height<120) {printf("You got 50%% discount.\n");amt=amt-(amt*0.5);}
+  
+
+  if(vip=='y'||vip=='Y') {printf("You got 10%% discount\n");amt=amt-(amt*0.1);}
+  else if(vip=='n'||vip=='N') {printf("You don't get any vip discount\n");}
+  
+  printf("Total Amount is Rs. %.2f",amt);
+  return 0;
+}
+
+//coffee shop
+
+#include<stdio.h>
+int main()
+{
+    float amt,total; char exp; int ord,qty;
+    printf("Welcome to our Tea Stall Counter! Our menu: \n");
+    c:printf("Tea --------------------- Rs. 10\nCoffee ------------------ Rs. 20\nCold coffee ------------- Rs. 50\nExit\n");
+    printf("Choose by entering a number (1-4): \n");
+    scanf("%d",&ord);
+    if(ord==1){
+        printf("How many cups of refreshing tea?: \n");
+        scanf("%d",&qty); total=(float)qty*10;
+        printf("Total for %d cup(s): Rs. %.2f.\n",qty,(float)qty*10);
+    }else if(ord==2){
+        printf("How many cups of aromatic coffee? \n");
+        scanf("%d",&qty); total=(float)qty*20;
+        printf("Total for %d cup(s): Rs. %.2f.\n",qty,(float)qty*20);
+    }else if(ord==3){
+        printf("How many cups of chilled cold coffee? \n");
+        scanf("%d",&qty); total=(float)qty*50;
+        printf("Total for %d cup(s): Rs. %.2f.\n",qty,(float)qty*50);
+    }else if(ord==4){
+        goto a;
+    }else{ printf("invalid entry\n"); goto c;}
+
+    printf("Enter your payment amount: Rs. \n");
+    scanf("%f",&amt);
+    if(amt>total)printf("change: Rs.%.2f\n",amt-total);
+    else printf("Pay the rest amount of Rs.%.2f\n",total-amt);
+
+    a:printf("Explore more or finalize? (Type 'Y' for Yes or 'N' for No):\n");
+    scanf(" %c",&exp);
+
+    if(exp=='y'||exp=='Y') {printf("Certainly, let's explore.\n"); goto c;}
+    else if(exp=='n'||exp=='N') {printf("Thank you for visiting! We look forward to serving you again soon!");}
+    return 0;
+}
+
+//ATM pin
+
+// Online C compiler to run C program online
+#include<stdio.h>
+int main()
+{
+    int pin,count=0;
+    a:puts("Enter your pin: "); scanf("%d",&pin);
+    if(pin==3256) puts("Welcome to Atm.");
+    if(pin!=3256 && count<2){
+        printf("\nTry again\n");
+        count++;
+        if(count==1){
+            printf("\nYou have 2 chance left\n");
+        }
+        if(count==2){
+            printf("\nYou have 1 chance left\n"); 
+        }
+        goto a;
+    }
+    if(count>=2) puts("\nYour account is blocked for 24hrs");
+}
+
+//grade
+
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int id,total,m1,m2,m3,m4,m5,m6; float avg; char name[21];
+    
+    printf("Enter your name: \n"); gets(name);
+    printf("Enter your Id: \n"); scanf("%d",&id);
+    printf("Enter Your marks: "); scanf("%d %d %d %d %d %d",&m1,&m2,&m3,&m4,&m5,&m6);
+    total=m1+m2+m3+m4+m5+m6;
+    avg=(float)total/6;
+    if(avg>75)
+    {
+        printf("id    Name     Total     Avg       Grade\n_\n %d %s %d %.2f Distinction",id,name,total,avg);
+    }
+
+    return 0;
+}
+
+// Arithmetic using switch
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2; char op;
+    printf("Enter num1: \n"); scanf("%d",&num1);
+    printf("Enter num2: \n"); scanf("%d",&num2);
+    printf("Enter the operator\n"); scanf(" %c",&op);
+    switch(op)
+    {
+        case '+':
+        printf("Addition is %d",num1+num2);break;
+
+        case '-':
+        if(num2>num1)
+        {printf("Subtraction is %d",num2-num1);break;}
+        else {printf("Subtraction is %d",num1-num2);break;}
+
+        case '*':
+        printf("Multiplication is %d",num1*num2);break;
+
+        case '/':
+        if(num2>num1)
+        {printf("Division is %d",num2/num1);break;}
+        else {printf("Division is %d",num1/num2);break;}
+
+        case '%':
+       if(num2>num1)
+        {printf("Division is %d",num2%num1);break;}
+        else {printf("Division is %d",num1%num2);break;}
+
+        default:
+        printf("Invalid Operator");
+    }
+    return 0;
+}
+//Even or odd using switch
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number: \n");scanf("%d",&n);
+    n%=2;
+    switch(n){
+        case 0:
+        printf("Even");break;
+        
+       default:
+        printf("odd");
+    }
+    return 0;
+}
+
+//Maximum number
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter a num1: \n"); scanf("%d",&a);
+    printf("Enter a num2: \n"); scanf("%d",&b);
+    if(a==b) printf("Equal");
+    else{
+    switch(a>b)
+    {
+        case 1:
+        printf("%d is big",a);break;
+        default:
+        printf("%d is big",b);
+    }}
+    return 0;
+}
+
+//Day of Month
+
+#include<stdio.h>
+int main()
+{
+    int m;
+    printf("Enter the month number: \n");scanf("%d",&m);
+    switch(m)
+    {
+        case 1:
+        printf("January is 31days");break;
+        case 2:
+        printf("Febuary is 28/29days");break;
+        case 3:
+        printf("March is 31days");break;
+        case 4:
+        printf("April is 30days");break;
+        case 5:
+        printf("May is 31days");break;
+        case 6:
+        printf("June is 30days");break;
+        case 7:
+        printf("July is 31days");break;
+        case 8:
+        printf("August is 31days");break;
+        case 9:
+        printf("September is 30days");break;
+        case 10:
+        printf("October is 31days");break;
+        case 11:
+        printf("November is 30days");break;
+        case 12:
+        printf("December is 31days");break;
+        default:
+        printf("Invalid month number");
+    }
+    return 0;
+}
+
+// Grade According to avg
+
+#include<stdio.h>
+int main()
+{
+    int s1,s2,s3,s4,s5;float avg; char grade;
+    printf("Enter your Physics Mark: \n");scanf("%d",&s1);
+    printf("Enter your Chemistry Mark: \n");scanf("%d",&s2);
+    printf("Enter your Biology Mark: \n");scanf("%d",&s3);
+    printf("Enter your Mathematics Mark: \n");scanf("%d",&s4);
+    printf("Enter your Computer Mark: \n");scanf("%d",&s5);
+    avg=((float)s1+s2+s3+s4+s5)/5;
+    if(avg>=90) grade='A';
+    else if(avg>=80) grade='B';
+    else if(avg>=70) grade='C';
+    else if(avg>=60) grade='D';
+    else if(avg>=40) grade='E';
+    else grade='F';
+    printf("\npercentage is %.2f%%\n",avg);
+    switch(grade){
+        case 'A':
+        printf("Grade A");break;
+        case 'B':
+        printf("Grade B");break;
+        case 'C':
+        printf("Grade C");break;
+        case 'D':
+        printf("Grade D");break;
+        case 'E':
+        printf("Grade E");break;
+        default:
+        printf("Grade F");
+    }
+    return 0;
+}
+
+//Consonant or Vowel
+
+#include<stdio.h>
+int main()
+{
+    char alpha;
+    printf("Enter a alphabet: \n");scanf(" %c",&alpha);
+    switch(alpha){
+        case 'a':
+        printf("Vowel");break;
+        case 'e':
+        printf("Vowel");break;
+        case 'i':
+        printf("Vowel");break;
+        case 'o':
+        printf("Vowel");break;
+        case 'u':
+        printf("Vowel");break;
+        case 'A':
+        printf("Vowel");break;
+        case 'E':
+        printf("Vowel");break;
+        case 'I':
+        printf("Vowel");break;
+        case 'O':
+        printf("Vowel");break;
+        case 'U':
+        printf("Vowel");break;
+        default:
+        printf("Consonant");
+    }
+    return 0;
+}
+
+//Employee department switch
+
+#include<stdio.h>
+int main()
+{
+    int id;
+    printf("Enter your id: \n");scanf("%d",&id);
+    switch(id>=11&&id<=15){
+        case 1:
+        printf("Software department");break;
+        case 0:
+        switch (id>=16&&id<=20){
+            case 1:
+            printf("Developer department");break;
+        
+        case 0:
+        switch (id>=21&&id<=23){
+            case 1:
+            printf("Management department");break;
+            case 0:
+            printf("Wrong Entry");
+        }
+        }
+    }
+    return 0;
+}
+
+//Atm deposit & withdrawn
+
+#include<stdio.h>
+int main()
+{
+    float iamt,damt,wamt;char trans;
+    printf("Enter the Initial amt: \n");scanf("%f",&iamt);
+    if(iamt<=0) printf("Invalid Entry");
+    else{
+    printf("Enter transaction(d for deposit/w for withdrawn): \n");scanf(" %c",&trans); 
+    switch(trans){
+        case 'd':
+         printf("Enter the Deposit amt: \n");scanf("%f",&damt);
+         if(damt<=0) printf("Invalid ammount");
+         else iamt+=damt; 
+         break;
+         case 'w':
+          printf("Enter the withdrawn amt: \n");scanf("%f",&wamt); 
+           if(wamt<=0||wamt>iamt) printf("Invalid ammount");
+         else iamt-=wamt; 
+          break;
+          default:
+          printf("Invalid entry");
+    }
+    printf("\nBalance=%.2f",iamt);
+    }
+    return 0;
+}
+
+//match score winner
+
+#include<stdio.h>
+int main()
+{
+    char name1[21],name2[21];int score1,score2;
+    printf("Player1 your name: \n");scanf("%s",name1);
+    printf("Enter your game score: \n");scanf("%d",&score1);
+    printf("Player2 your name: \n");scanf("%s",name2);
+    printf("Enter your game score: \n");scanf("%d",&score2);
+    
+    if(score1==score2) printf("match is tie");
+    else{
+
+    switch(score1>score2){
+        case 1:
+        printf("%s is winner and score %d more points than %s",name1,score1-score2,name2);break;
+        case 0:
+         printf("%s is winner and score %d more points than %s",name2,score2-score1,name1);break;
+    }}
+    return 0;
+}
+
+//employee id validation
+
+#include<stdio.h>
+int main()
+{
+    int id,pass;
+    printf("Enter your User id: \n");scanf("%4d",&id);
+    
+
+    switch(id==1001)
+    {
+        case 1:
+        printf("Enter your Password: \n");scanf("%4d",&pass);
+        switch(pass==1010){
+            case 1:
+            printf("Welcome, User 1001");break;
+            case 0:
+            printf("Incorrect Password");break;
+        }
+        break;
+        case 0:
+        printf("Incorrect id"); break;
+    }
+    return 0;
+}
+
+//shop switch
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int fno,vno,mno,aqty,bqty,oqty,cqty,brqty,sqty;float amt;
+  a:  printf("Main Menu:\n");
+    printf("1.Fruits \n");
+    printf("2.Vegetables \n");
+    printf("3.Bill \n");
+    printf("4.Exit \n");
+    printf("Enter your choice: \n");
+    scanf("%d",&mno);
+    switch(mno)
+    {
+        case 1:
+        abc: printf("\nFruit Menu: \n");
+    printf("1.Apple (15 Rupees each)\n");
+    printf("2.Banana (10 Rupees each)\n");
+    printf("3.Orange (20 Rupees each)\n");
+    printf("4.Add more\n\n");
+    printf("Enter Your Choice: \n");
+    scanf("%d",&fno);
+    switch(fno){
+        case 1:
+        printf("How many Apples: \n");
+        scanf("%d",&aqty);amt+=aqty*15; goto a;break;
+        case 2:
+        printf("How many Bananas: \n");
+        scanf("%d",&bqty);amt+=bqty*10;goto a;break;
+        case 3:
+        printf("How many Oranges: \n");
+        scanf("%d",&oqty);amt+=oqty*20;goto a;break;
+        default: printf("Invalid Entry");goto abc;
+    }
+    case 2:
+    bc: printf("\nVegetable Menu: \n");
+    printf("1.Carrot (5 Rupees each)\n");
+    printf("2.Broccoli (10 Rupees each)\n");
+    printf("3.Spinach (15 Rupees each)\n\n");
+    printf("Enter Your Choice: \n");
+    scanf("%d",&vno);
+    switch(vno){
+        case 1:
+        printf("How many Carrot: \n");
+        scanf("%d",&cqty);amt+=cqty*5;goto a;break;
+        case 2:
+        printf("How many Broccoli: \n");
+        scanf("%d",&brqty);amt+=brqty*10;goto a;break;
+        case 3:
+        printf("How many Spinach: \n");
+        scanf("%d",&sqty);amt+=sqty*15;goto a;break;
+        default: printf("Invalid Entry");goto bc;
+    }
+        case 3:
+        printf("Your bill is %.2f",amt);
+        amt=0;break;
+        
+        case 4:
+        printf("Thank You");
+        return 0;
+        
+        default:
+        printf("Invalid Entry");
+    }
+    return 0;
+}
+
+//length conversion
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int conv;float len;
+    printf("1.Meter to Kilometer\n");
+    printf("2.Centimeter to Meter\n");
+    printf("3.Centimeters to Meters\n");
+    printf("4.Meters to Centimeter\n");
+    printf("Enter your choice: \n");
+    scanf("%d",&conv);
+    printf("Enter the length: \n");
+    scanf("%f",&len);
+    switch(conv){
+        case 1:
+        printf("%.2f meter is %.2f km",len,len/1000);break;
+        case 2:
+        printf("%.2f Kilometer is %.2f m",len,len*1000);break;
+        case 3:
+        printf("%.2f Centimeter is %.2f m",len,len/100);break;
+        case 4:
+        printf("%.2f meter is %.2f cm",len,len*100);break;
+        default: 
+        printf("Invalid Entry");
+    }
+    return 0;
+}
+
+//Rental car switch
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int car,day;
+    abc:printf("Choose your car models: \n\n");
+    printf("1.Sedan-$50\n");
+    printf("2.SUV-$70\n");
+    printf("3.Hatchback-$40\n");
+    printf("4.Truck-$100\n");
+    
+    printf("Enter model no: \n");
+    scanf("%d",&car);
+    if (car>4) {printf("Invalid Entry\n\n");goto abc;}
+    else{
+    printf("Rent for how many days: \n");
+    scanf("%d",&day);
+    
+    switch(car){
+        case 1:
+        printf("Rent of Sedan for %d days is $%.2f",day,(float)day*50);break;
+        case 2:
+        printf("Rent of SUV for %d days is $%.2f",day,(float)day*70);break;
+        case 3:
+        printf("Rent of Hatchback for %d days is $%.2f",day,(float)day*40);break;
+        case 4:
+        printf("Rent of Truck for %d days is $%.2f",day,(float)day*100);break;
+        
+    }
+}
+    return 0;
+}
+
+//while loop
+//sum of digit
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int num,sum=0;
+    printf("Enter a number: \n");
+    scanf("%d",&num);
+    while(num>0){
+        sum+=num%10;
+        num/=10;
+    }
+    printf("Sum of the digit = %d",sum);
+    return 0;
+}
+
+//count the digit
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int num,count;
+    printf("Enter a number: \n");scanf("%d",&num);
+    while(num>0)
+    {
+        num/=10;
+        count++;
+    }
+    printf("Count of digit is: %d",count);
+    return 0;
+}
+
+//reverse the number
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int num,rem=0,res=0;
+    printf("Enter the number: \n");scanf("%d",&num);
+    while(num>0){
+        rem=num%10;
+        res=rem+res*10;
+        num/=10;
+    }
+    printf("Reverse is %d",res);
+    return 0;
+}
+
+//factorial
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n,f=1;
+    printf("Enter the number: \n");scanf("%d",&n);
+    while(n>0) f=f*n--;
+    printf("Factorial is %d",f);
+    return 0;
+}

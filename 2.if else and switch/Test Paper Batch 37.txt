@@ -1,0 +1,434 @@
+Que-1) choose the exact output
+
+#include <stdio.h>
+int a=0;
+int main(){
+   
+	int  b;
+	a = 6 + -16 + 16 + -6;
+	b = a + 1;
+	(a == b)?printf("%d %d",a,b):
+	printf("%u %u",a, b);
+    return 0;
+}
+
+A. 1 1
+B. 1 0
+C. 0 1
+D. Compile time error
+
+
+Ans : C
+_________________________________________________________________________
+Que-2)
+What will be the output of the following C code?
+
+    #include <stdio.h>
+    void main()
+    {
+        int x = 3;
+        {
+            x = 4;
+            printf("%d", x);
+        }
+    }
+a) 4
+b) 3
+c) 0
+d) Undefined
+View Answer
+
+Answer: a
+__________________________________________________________________________
+Que-3)
+What will be the output of the following C code?
+
+    #include <stdio.h>
+    int x;
+    void main()
+    {
+        
+        printf("%d", x);
+    }
+   
+a) 0
+b) 4
+c) Compile time error
+d) Undefined
+View Answer
+
+Answer: a
+________________________________________________________________________\
+Que-4)
+What will be the output of the following C code?
+
+    #include <stdio.h>
+    int x = 5;
+    int main() {
+    
+        int x = 9;
+        {
+            x = 4;
+        }
+        printf("%d", x);
+    return 0;
+    }
+
+a) 9
+b) 5
+c) 4
+d) 0
+View Answer
+
+Answer: d
+___________________________________________________________________________
+Que-5)
+---------------
+#include <stdio.h>
+    void main()
+    {
+        {
+            int x = 8;
+        }
+        printf("%d", x);
+    }
+
+a) 8
+b) 0
+c) Undefined
+d) Compile time error
+View Answer
+
+Answer: d
+____________________________________________________________________________
+Que-6) Which variable has the longest scope in the following C code?
+-----------------
+ #include <stdio.h>
+void main()
+{
+   int a=1, b=2, c=3, d;
+   d = (a=c, b+=a, c=a+b+c);
+   printf("%d %d %d %d", d, a, b, c);
+}
+
+A. 11 3 5 11
+B. 11 1 5 11
+C. 11 3 2 11
+D. 11 3 3 11
+
+
+Ans : A
+
+
+___________________________________________________________________________
+Que-7
+---------
+
+#include <stdio.h>
+int main()
+{
+int var = 010;
+
+printf("%d", var);
+}
+
+
+a) 9
+b) 10
+c) 2
+d) 8
+
+Answer-d
+______________________________________________________________________________
+Que-8
+_________
+
+ #include <stdio.h>
+    void main()
+    {
+        int x = 3;
+        {
+        int x = 4;
+            printf("%d", x);
+        }
+    }
+
+
+a) 4
+b) 3
+c) 0
+d) Compiler error
+
+Answer-a
+
+__________________________________________________________________________
+
+Que-9
+_________
+
+ #include <stdio.h>
+  int var = 20;
+  int main()
+  {
+    int var = var;
+    printf("%d ", var);
+    return 0;
+  }
+
+A. Garbage Value
+B. 20
+C. Compiler Error
+D. 0
+
+
+Ans : D
+
+_______________________________________________________________________________
+Que-10
+______
+ #include <stdio.h>
+
+int main()
+{
+char ch;
+ch = 128;
+printf("%d", ch);
+return 0;
+}
+
+A. 128
+B. -128
+C. Depends on compiler
+D. None of the above
+
+
+Ans : B
+______________________________________________________________________________
+Que-11
+____________
+ #include <stdio.h>
+
+int main()
+{
+float x = 'a';
+printf("%f", x);
+return 0;
+}
+
+A. a
+B. 0.000000
+C. 97.000000
+D. Run time error
+
+
+Ans : C
+
+_________________________________________________________________________________
+Que-12
+_______
+#include <stdio.h>
+void main()
+{
+      int p, q, r, s;
+      p = 1;
+      q = 2;
+      r = p, q;
+      s = (p, q);
+      printf("p=%d q=%d", p, q);
+}
+
+A. p=1 q=1
+B. p=1 q=2
+C. p=2 q=2
+D. Invalid Syntex
+
+
+Ans : B
+
+___________________________________________________________________________________
+Que-13
+_______
+
+#include <stdio.h>
+void main()
+{
+   int a=1, b=2, c=3, d;
+   d = (a=c, b+=a, c=a+b+c);
+   printf("%d %d %d %d", d, a, b, c);
+}
+
+A. 11 3 5 11
+B. 11 1 5 11
+C. 11 3 2 11
+D. 11 3 3 11
+
+
+Ans : A
+
+____________________________________________________________________________________
+Que-14
+_____
+
+5.What will be the output of the following code?
+
+int main() {
+    int a = 1, b = 0, c = 5;
+    int result = a && b || c;
+    printf("%d", result);
+    return 0;
+}
+A. 0
+B. 1
+C. 5
+D. Compiler error
+Answer: B. 1
+____________________________________________________________________________________
+Que-15
+_____
+
+   What will be the output of the following code?
+      int main(){
+      int a;
+      int  b;
+      a = 6 + -16 + 16 + -6;
+      b = a + 1;
+      (a == b)?printf("%d %d",a,b):
+      printf("%u %u",a, b);
+      return 0;
+    }
+
+A. 1 1
+B. 1 0
+C. 0 1
+D. Compile time error
+
+
+Ans : C
+                                                                                 Set-A
+
+==========================================================================================================================================================================================
+
+Question 1.
+-----------------
+Write a c program the check if a number is positive or negative without using any loop?
+
+
+Question 2.
+----------------
+ Write a c program  to calculate compound interest annually is given by: 
+  Amount= P(1 + R/100)t
+  Compound Interest = Amount – P
+  Where, 
+  P is principal amount 
+  R is the rate and 
+  T is the time span       
+
+  without using any loop .  
+
+
+Question 3.
+----------------
+ Write a C program to determine the larger of three numbers.
+ for example a=10, b=20, and c=30
+      Output: c=30.
+
+
+Question 4.
+-----------------
+Write a c program calculate the result of raising a number to a power in C.
+
+
+                                                                                       Set-B
+
+============================================================================================================================================================================================
+Question 1.
+-----------------
+Write a C program to print a block F using the hash (#), where the F has a height of six characters and width of five and four characters. And also print a very large 'C'.
+Expected Output:
+
+######
+#
+#
+#####
+#
+#
+#
+    ######
+  ##      ##
+ #
+ #
+ #
+ #
+ #
+  ##      ##
+    ######
+
+
+
+Question 2.
+-----------------
+
+Write a C program to compute the perimeter and area of a rectangle with a height of 7 inches and width of 5 inches.
+
+Perimeter of the rectangle = 24 inches
+Area of the rectangle = 35 square inches
+
+Question 3.
+-----------------
+Write a C program that accepts two item's weight and number of purchases (floating point values) and calculates their average value.
+
+Question 4. 
+--------------
+C Program To Convert Fahrenheit To Celsius
+write a C Program to convert temperature from Fahrenheit to Celsius by applying the conversion formula to calculate the equivalent temperature in Celsius. For example, 82°  in Fahrenheit is equal to 27.7° in Celcius.
+Formula to Convert Fahrenheit to Celsius
+  T(°C) = (T(°F) - 32) × 5/9    
+
+                                                                                    Set-C
+============================================================================================================================================================================================
+Question 1.
+-----------------
+
+Write a C program that accepts an employee's ID, total worked hours in a month and the amount he received per hour. Print the ID and salary (with two decimal places) of the employee for a particular month.
+
+Input the Employees ID: 0342
+Input the working hrs: 8
+Salary amount/hr: 15000
+Employees ID = 0342
+Salary =  120000.00
+
+
+Question 2.
+-----------------
+Write a C program to convert a given integer (in seconds) to hours, minutes and seconds.
+
+Input seconds: 25300
+Expected Output:
+H:M:S - 7:1:40
+
+
+Question 3.
+-----------------
+Write a C program that reads two integers and checks whether they are multiplied or not.
+
+Input the first number: 5
+Input the second number: 15
+
+output-5 Multiplied by 15
+
+Input the first number: 2
+Input the second number: 15
+
+output-2 not Multiplied by 15
+
+
+Question 4. 
+--------------
+Write a C program that accepts two integers from the user and calculates the product of the two integers.
+Input:
+Input the first integer: 25
+Input the second integer: 15
+
+Product of the above two integers = 375   
+
+

@@ -1,0 +1,209 @@
+Write a program in C to store elements in an array and print it.
+
+Input 10 elements in the array :
+
+element - 0 : 1
+
+element - 1 : 1
+
+element - 2 : 2
+
+element - 3 : 3
+
+element - 4 : 4
+
+element - 5 : 5
+
+element - 6 : 6
+
+element - 7 : 7
+
+element - 8 : 8
+
+element - 9 : 9
+
+.......
+
+and so on.
+
+Expected Output :
+
+Elements in array are: 1 1 2 3 4 5 6 7 8 9
+
+int a[10],i;
+	printf("Enter 10 elements in the array :\n");
+	for(i=0;i<10;i++){
+		printf("element - %d :",i);
+		scanf("%d",&a[i]);
+	}
+	printf("Elements in array are:");
+	for(i=0;i<10;i++)printf("%2d",a[i]);
+========================================================================================================
+Display Array in Reverse Order
+
+Write a program in C to read n number of values in an array and display it in reverse order.
+
+Input the number of elements to store in the array :3
+
+Input 3 number of elements in the array :
+
+element - 0 : 2
+
+element - 1 : 5
+
+element - 2 : 7
+
+Expected Output :
+
+The values store into the array are :
+
+2 5 7
+
+The values store into the array in reverse are :
+
+7 5 2
+
+code
+----
+    int a[100],n,i;
+    printf("Input the number of elements to store in the array :");
+    scanf("%d",&n);
+    printf("nput %d number of elements in the array :\n",n);
+    for(i=0;i<n;i++){
+    	printf("element - %d :",i);
+    	scanf("%d",&a[i]);
+	}
+	int  b[100];
+	for(i=0;i<n;i++)b[i]=a[i];
+	//for reverse the number
+	for(i=0;i<n/2;i++){
+		a[i]=a[i]+a[n-i-1];
+		a[n-i-1]=a[i]-a[n-i-1];
+		a[i]=a[i]-a[n-i-1];
+	}
+	printf("The values store into the array are :\n");
+	for(i=0;i<n;i++)printf("%3d",b[i]);
+	printf("\nThe values store into the array in reverse are :");
+	for(i=0;i<n;i++)printf("%3d",a[i]);
+========================================================================================================
+ Sum of all elements
+
+
+Write a program in C to find the sum of all elements of the array.
+
+Input the number of elements to be stored in the array :3
+
+Input 3 elements in the array :
+
+element - 0 : 2
+
+element - 1 : 5
+
+element - 2 : 8
+
+Expected Output :
+
+Sum of all elements stored in the array is : 15
+code:
+-----
+	int a[100],n,i;
+    printf("Input the number of elements to store in the array :");
+    scanf("%d",&n);
+    printf("nput %d number of elements in the array :\n",n);
+    for(i=0;i<n;i++){
+    	printf("element - %d :",i);
+    	scanf("%d",&a[i]);
+	}
+
+	//for adding the elements
+	int sum=0;
+	for(i=0;i<n;i++){
+		sum+=a[i];
+	}
+	printf("Sum of all elements stored in the array is :%d",sum);
+========================================================================================================
+ print odd and even elements
+
+
+Write a program in C to print separately the  odd and even integers 
+
+Test Data :
+
+Input the number of elements to be stored in the array :5
+
+Input 5 elements in the array :
+
+element - 0 : 25
+
+element - 1 : 47
+
+element - 2 : 42
+
+element - 3 : 56
+
+element - 4 : 32
+
+Expected Output :
+
+The Even elements are :
+
+42 56 32
+
+The Odd elements are :
+
+25 47
+code:
+-----
+    int a[100],n,i,odd[100],even[100],o=0,e=0;
+    printf("Input the number of elements to store in the array :");
+    scanf("%d",&n);
+    printf("nput %d number of elements in the array :\n",n);
+    for(i=0;i<n;i++){
+    	printf("element - %d :",i);
+    	scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++){
+		if(a[i]%2){
+			odd[o]=a[i];
+			o++;
+		}
+		else{
+			even[e]=a[i];
+			e++;
+		} 
+	}
+	puts("The Even elements are:");
+	for(i=0;i<e;i++)printf("%3d",even[i]);
+	puts("\nThe Odd elements are:");
+	for(i=0;i<o;i++)printf("%3d",odd[i]);
+
+
+========================================================================================================
+
+
+Write a C program to store some integers in an array and print all the prime numbers available in that array
+
+
+Input as :
+
+1 2 3 4 5
+
+Output as :
+
+2 3 5
+
+code:
+-----
+ int a[100],n,i,j,c;
+    printf("Input the number of elements to store in the array :");
+    scanf("%d",&n);
+    printf("nput %d number of elements in the array :\n",n);
+    for(i=0;i<n;i++){
+    	scanf("%d",&a[i]);
+	}
+	puts("the prime number are:");
+	for(i=1;i<n;i++){
+		for(c=0,j=1;j<=a[i];j++)if(a[i]%j==0)c++;
+		if(c==2)printf("%3d",a[i]);
+	}
+

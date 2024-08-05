@@ -1,0 +1,21 @@
+8 pillars of array
+------------------
+1.reading and printing the array
+2.can you able  to perform arithmetic operation on array element
+3.sorting
+	-general way of sorting
+	-bubble sort
+	-selection sort
+	-quick sort
+	-insertion sort
+	-quick, heap, merge
+ 4.searching
+	-linear
+	-binary
+ 5.copy the array
+ 6.how to merge two array
+ 7.insertion 
+ 8.delete
+ 9.missing element
+
+
