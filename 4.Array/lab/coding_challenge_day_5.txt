@@ -160,7 +160,22 @@ Expected Output :
 
 The new list is : 1 2 4 5 
 
-
+int a[100],n,i,j,r,v;
+	puts("Enter the  number of elements to be stored in the array: ");
+	scanf("%d",&n);
+	puts("Enter the elements in the array");
+	for(i=0;i<n;i++)scanf("%d",&a[i]);
+	puts("Enter the position which to delete:");
+	scanf("%d",&v);
+	for(i=0;i<n;i++){
+		if(a[i]==v){
+			for(j=i;j<n;j++)a[j]=a[j+1];
+			n--;
+			break;
+		}
+	}
+	for(i=0;i<n;i++)printf("%3d  ",a[i]);  
+i--
 
 =====================================================================================================================
 
@@ -185,5 +200,18 @@ Expected Output :
 The new list is : 3 5 6 7 9 1
 
 
-
+	int a[100],n,i,j,r,v;
+	puts("Enter the  number of elements to be stored in the array: ");
+	scanf("%d",&n);
+	puts("Enter the elements in the array");
+	for(i=0;i<n;i++)scanf("%d",&a[i]);
+	puts("Enter the position which to delete:");
+	scanf("%d",&v);
+	for(i=0;i<n;i++){
+		if(a[i]==v){
+			for(j=i;j<n;j++)a[j]=a[j+1];
+			n--;
+		}
+	}
+	for(i=0;i<n;i++)printf("%3d  ",a[i]);  
 =====================================================================================================================
