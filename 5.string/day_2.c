@@ -64,5 +64,18 @@ int main(){
 	printf("The number of words=%d",spa+1);  */
 	
 //Finding palindrome using 2 strings
+/*	char s1[10],s2[10];
+	int i,j;
+	puts("Enter a string:");gets(s1);
+	for(i=0;s1[i];i++);
+	for(j=0,s1[i--]='\0';i>=0;i--,j++)
+		s2[j]=s1[i];
+	for(i=0;s1[i];i++){
+		if(tolower(s1[i])!=tolower(s2[i])){printf("not a palindrome");
+		return;
+	}
+	}
+	printf("palindrome");
+	*/
 
 }
