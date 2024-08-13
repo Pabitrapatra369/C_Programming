@@ -1,0 +1,131 @@
+Que-1
+__________________
+Write a program in C to find the square of any number using the function.
+Test Data :
+Input any number for square : 20
+Expected Output :
+
+The square of 20 is : 400.00
+
+Function name : printSqaure()
+return type : void 
+parameter : 0 parameter/ no parameter 
+void printSquare(void){
+	float n;
+	puts("Enter the a number:");scanf("%f",&n);
+	printf("sqaure is %.2f",n*n);
+}
+int main(){
+	
+	printSquare();
+	
+	
+}
+______________________________________________________________________________
+Que-2
+__________________
+Write a program in C to swap two numbers using a function.
+by using 3rd variable 
+
+Test Data :
+Input 1st number : 2
+Input 2nd number : 4
+Expected Output :
+
+Before swapping: n1 = 2, n2 = 4                                                  
+After swapping: n1 = 4, n2 = 2 
+
+Function name : swapNumber01()
+return type : void 
+parameter as: 0 parameter/ no parameter 
+_____________________________________________________________________________
+Que-3
+__________________
+Write a program in C to swap two numbers using a function.
+without using 3rd variable 
+
+Test Data :
+Input 1st number : 2
+Input 2nd number : 4
+Expected Output :
+
+Before swapping: n1 = 2, n2 = 4                                                  
+After swapping: n1 = 4, n2 = 2 
+
+Function name : swapNumber02()
+return type : void 
+parameter as: 0 parameter/ no parameter 
+
+______________________________________________________________________________
+Que-4
+__________________
+Write a program in C to check if a given number is even or odd using the function.
+Test Data :
+Input any number : 5
+Expected Output :
+The entered number is odd. 
+
+Function name : FindEvenAndOdd()
+return type : void 
+parameter as: 0 parameter/ no parameter 
+
+_____________________________________________________________________________
+Que-5
+___________________
+Write a program in C to check whether a number is a prime number or not using the function.
+Test Data :
+Input a positive number : 5
+Expected Output :
+
+The number 5 is a prime number. 
+
+Function name : FindPrime()
+return type : void 
+parameter as: 0 parameter/ no parameter 
+_____________________________________________________________________________
+Que-6
+___________________
+Write a program in C to find the sum of the series 
+1!/1+2!/2+3!/3+4!/4+5!/5 using the function.
+Expected Output :
+The sum of the series is : 34 
+
+Function name : fact()
+return type : void 
+parameter as: 1 parameter of int type  
+
+_____________________________________________________________________________
+Que-7
+___________________
+Write a program in C to get the largest element amoung all the
+number by using the function.
+Test Data :
+Input 3 elements in the variable :
+int a=10;
+int b=30;
+int c=15;
+Expected Output :
+
+The largest element  is : 30    
+
+Test Data :
+Input 3 elements in the variable :
+int a=90;
+int b=30;
+int c=125;
+Expected Output :
+
+The largest element  is : 125   
+
+Test Data :
+Input 3 elements in the variable :
+int a=190;
+int b=30;
+int c=125;
+Expected Output :
+
+The largest element  is : 190   
+
+Function name : FindLargest()
+return type : void 
+parameter as: 3 parameter as int a,int b, int c 

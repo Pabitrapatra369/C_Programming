@@ -76,7 +76,8 @@ int main(){
 			j--;
 		}
 		else if(a[i]+a[j]>s)j--;
-		else i++;
+		else i++;  
 		
-	}   */
+	}    */
+	
 }

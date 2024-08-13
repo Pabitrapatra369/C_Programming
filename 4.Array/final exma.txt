@@ -1,0 +1,336 @@
+                                                                               Set-A
+========================================================================================================
+1.   Inverted Right-Angled Triangle of Numbers
+     Write a C program to print the following pattern using numbers:
+
+       12345
+       1234
+       123
+       12
+       1
+	int i,j,n;
+	puts("enter the value of n:");scanf("%d",&n);
+	for(i=0;i<=n;i++){
+		for(j=1;j<=n-i;j++){
+			printf("%d",j);
+		}
+		printf("\n");
+	
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Write a C program to find the element given by user is present in the array or    not ? 
+If the element is present in the array also programmer have to print 
+index position of that searching element.
+If the user pass the element for searching in the array is not present
+then also provide a appropriate message to the user that element is not 
+present inside the array.
+
+
+Input 1:-
+
+[1,2,3,4,5,6,7]
+
+Enter the number you want to search : 5
+
+Output :-
+The element which you have sreached is present inside the 4rth index 
+
+Input 2:-
+
+[1,2,3,4,3,6]
+
+Enter the number you want to search : 9
+
+OutPut :
+The element which you have sreached is not present inside the Array.
+
+	int a[100],i,j,n,e;
+	puts("Enter the size of the array: ");scanf("%d",&n);
+	puts("Enter the Elements of the array");
+	for(i=0;i<n;i++)scanf("%d",&a[i]);
+	puts("Enter the element you want to search:");
+	scanf("%d",&e);
+	for(i=0;i<n;i++){
+		if(a[i]==e){
+		
+		printf("The element which you have sreached is present inside the %d index",i
+		);
+		return;
+	}
+	}
+	printf("Element is not found.");
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 . Write a c program to find the K’th Smallest in Unsorted Array |
+    Prerequisite: K’th Smallest
+
+   Given an array and a number k where k is smaller than the size of the array, we need to find the k’th smallest element in the given array. It is given that all array 
+   elements are distinct.
+
+  Examples:
+
+  Input: arr[] = {7, 10, 4, 3, 20, 15}
+       k = 3
+  Output: 7
+
+  Input: arr[] = {7, 10, 4, 3, 20, 15}
+      k = 4
+  Output: 10
+
+	int a[100],i,j,n,k;
+	puts("Enter the size of the array: ");scanf("%d",&n);
+	puts("Enter the Elements of the array");
+	for(i=0;i<n;i++)scanf("%d",&a[i]);
+	puts("Enter kth smallest element position:");
+	scanf("%d",&k);
+	for(i=0;i<n-1;i++){
+		for(j=i+1;j<n;j++){
+			if(a[i]>a[j]){
+				a[i]=a[i]+a[j];
+				a[j]=a[i]-a[j];
+				a[i]=a[i]-a[j];
+			}
+		}
+	}
+	int min=INT_MAX;
+	for(i=0;i<n;i++){
+		if(a[i]<a[i+1]){
+			min=a[i];
+			k--;
+		}
+		if(k==0){
+		    printf("%d",a[i]);
+		    break;
+		}
+		
+	}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+4 . Write a program in C to find the sum of rows and columns of a    matrix.
+ Test Data :
+ Input the size of the square matrix : 2
+ Input elements in the first matrix :
+ element - [0],[0] : 5
+ element - [0],[1] : 6
+ element - [1],[0] : 7
+ element - [1],[1] : 8
+ Expected Output :
+ The First matrix is :
+ The matrix is :
+ 5 6
+ 7 8
+ The sum or rows and columns of the matrix is :
+ 5 6 11
+ 7 8 15
+ 12 14
+
+ 	int a[10][10],i,j,n;
+	puts("Input the size of the square matrix ");scanf("%d",&n);
+	puts("Enter the Elements of the matrix");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+		printf("element - [%d],[%d] : ",i,j);
+		scanf("%d",&a[i][j]);
+		}
+		
+	}
+	puts("Your Matrix is :");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++)printf("%d ",a[i][j]);
+		printf("\n");
+	}
+	puts("The sum or rows and columns of the matrix is :");
+	int rs,cs;
+	for(i=0;i<n;i++){
+		for(rs=cs=j=0;j<n;j++){
+			rs+=a[i][j];
+			cs+=a[j][i];
+		}
+		a[i][n]=rs;
+		a[n][i]=cs;
+	}
+	for(i=0;i<=n;i++){
+		for(j=0;j<=n;j++){
+			if(i==n&&j==n)printf(" ");
+		   else	printf("%3d",a[i][j]);
+		}
+	   printf("\n");
+	}                                                                               Set-B
+===========================================================================================================================================================================
+
+1. Number Pyramid
+   Write a C program to print the following number pyramid:
+
+    1
+    121
+    12321
+    1234321
+    123454321
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2 . Write a program in C to insert New value in the array (sorted array ) at its proper respective position as its accending order.
+  Test Data : 
+
+  Input the size of array : 5 
+  Input 5 elements in the array : 
+
+  element - 0 : 1 
+
+  element - 1 : 3 
+
+  element - 2 : 7
+
+  element - 3 : 8
+
+  element - 4 : 10
+
+  Input the value to be inserted : 6
+
+
+  Expected Output : 
+
+  The current list of the array : 
+
+  1 3 7 8 10
+
+
+  After Insert the element the new list is : 
+
+  1 3 6 7 8 10
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3 . Write a program in C to separate odd and even integers in separate arrays. 
+
+Test Data :
+Input the number of elements to be stored in the array :5
+Input 5 elements in the array :
+element - 0 : 25
+
+element - 1 : 47
+
+element - 2 : 42
+
+element - 3 : 56
+
+element - 4 : 32
+
+Expected Output :
+
+The Even elements are :
+
+42 56 32
+
+The Odd elements are :
+
+25 47
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4 . Write a program in C to print or display an upper triangular matrix.
+Test Data :
+Input the size of the square matrix : 3
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 6
+element - [2],[0] : 7
+element - [2],[1] : 8
+element - [2],[2] : 9
+Expected Output :
+
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+
+Setting zero in upper triangular matrix
+
+1 0 0
+4 5 0
+7 8 9
+
+
+
+                                                                     Set-C
+=============================================================================================================================================
+
+
+1. Diamond Pattern of Stars
+   Write a C program to print the following diamond pattern:
+
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2 .Write a C program to remove all occurrences of a specific element from a given array of integers. The program should display the resulting array after removing the element.
+
+
+Test Data :
+
+Input the size of array : 10
+
+Input 10 elements in the array : 
+
+3 2 5 6 2 7 9 2 2 1
+
+
+Input the element that you want to delete: 2
+
+
+Expected Output : 
+
+The new list is : 3 5 6 7 9 1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 . Write a program in C to find the second smallest element in an array. 
+Test Data :
+
+Input the size of array : 5
+
+Input 5 elements in the array (value must be <9999) :
+
+element - 0 : 0
+
+element - 1 : 9
+
+element - 2 : 4
+
+element - 3 : 6
+
+element - 4 : 5
+
+Expected Output :
+The Second smallest element in the array is : 4
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Write a program in C to find the transpose of a given matrix.
+Test Data :
+Input the rows and columns of the matrix : 2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+ 
