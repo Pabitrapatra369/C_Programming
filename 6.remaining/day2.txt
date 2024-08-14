@@ -1,0 +1,75 @@
+Que-1
+______________
+Write a program in C to print all perfect numbers in a given range using the function.
+Test Data :
+Input lowest search limit of perfect numbers : 1
+Input lowest search limit of perfect numbers : 100
+Expected Output :
+
+ The perfect numbers between 1 to 100 are :                                      
+ 6   28  
+_________________________________________________________________________________________________
+Que-2
+_______________
+About sunny number :
+Given a positive integer N, the task is to check whether the given number N is Sunny Number or not.
+A number N is a sunny number if N + 1 is a perfect square.
+
+Examples:  
+____________
+Input: N = 8 
+Output: Yes 
+Explanation: 
+Since 9 is a perfect square. therefore 8 is a sunny number.
+
+Input: N = 11 
+Output: No 
+Explanation: 
+Since 12 is not a perfect square. therefore 8 is not a sunny number. 
+
+
+Write a c program to find the number given by the user is sunny number or not by creating the function 
+name as isSunny(int number) and return type will be void 
+___________________________________________________________________________________________________
+Que-3
+_____________
+Write a program in C to find the length of a string without using library functions.
+and by creating own function and check the data 
+Function name : length(char [] arr)
+Return type : void 
+
+Test Data :
+Input the string : nareshit.com
+
+Expected Output :
+
+Length of the string is : 12
+___________________________________________________________________________________________________ 
+Que-4
+_________________
+Write a program in C to check whether two given strings are an anagram.
+by creating own function and check the data 
+Function name : is anagram(char [] arr1,char [] arr2)
+Return type : void 
+
+Test Data :
+Input the first String : spare
+Input the second String : pears
+
+Expected Output :
+spare and pears are Anagram.     
+__________________________________________________________________________________________________
+Que-5
+__________________
+Write a program in C to print individual characters of a string in reverse order.
+by creating own function and check the data 
+Function name : printReverse(char [] arr)
+Return type : void 
+
+Test Data :
+Input the string : nareshit.com
+
+Expected Output :
+
+The characters of the string in reverse are :
+m  o  c  .  t i h s e r a n
