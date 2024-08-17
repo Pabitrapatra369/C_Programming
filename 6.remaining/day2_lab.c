@@ -22,9 +22,9 @@ void length(char str[]){
 	printf("The length of the string is : %d",i);
 	
 }
-void cheackAnagram(char s1[],char s2[]){
+void cheackAnagram(char s1[100],char s2[100]){
 	
-	int i,j,f=0,fchek=0,c=0;
+	int i,j,c=0;
 	int s1len,s2len;
 	for(i=0;i<s1[i];i++);s1len=i; 
 	for(i=0;i<s2[i];i++);s2len=i;
@@ -33,18 +33,19 @@ void cheackAnagram(char s1[],char s2[]){
 //	printf("%d",s2len);
 if(s1len==s2len){
 	for(i=0;s1[i];i++){
-		for(f=0,j=0;s2[j];j++){
+		for(j=0;s2[j];j++){
 			if(s1[i]==s2[j]){
 				c++;
+				s2[j]='@';
 				continue;
 			}
 		}
 		
 	}
-//	printf("%d\n",c);
-//	printf("%d\n",s1len);
-	if(s1len==c)printf("this is a annagram");
-	else printf("not a anngram");
+	printf("%d\n",c);
+	printf("%d\n",s1len);
+//	if(s1len==c)printf("this is a annagram");
+//	else printf("not a anngram");
 }
 else printf("not a anngram");
 }
@@ -79,10 +80,10 @@ int main(){
 //	gets(ch);
 //	length(ch);
 //check two  words are anagram or not
-//	char s1[100],s2[100];
-//	puts("Enter first string:");gets(s1);
-//	puts("Enter second string:");gets(s2);
-//	cheackAnagram(s1,s2);
+	char s1[100],s2[100];
+	puts("Enter first string:");gets(s1);
+	puts("Enter second string:");gets(s2);
+	cheackAnagram(s1,s2);
 //reverse the string
 //	char s[100];
 //	puts("Enter a string");gets(s);

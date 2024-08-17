@@ -1,19 +1,23 @@
 #include<stdio.h>
 int main()
 {
-	int n ;
-        //console.log(n);
-        scanf("%d",&n);
-        int m = n;
-        int d;
-        int s = 0;
-        int f,j;
-        for (; m >= 0; m / 10) {
-          d = m % 10;
-          if (d == 0) f = 1;
-          else for ( j = 1, f = 1; j <= d; j++) f *= j;
-          s += f;
-        }
-        if (s == n) printf("strong Number");
-        else printf( "Not a strong Number");
+	char s[100];
+	puts("Enter a string:");gets(s);
+	int i,j,k,c,len;
+	for(i=0;s[i];i++);len=i;
+	for(i=0;i<s[ih];i++){
+		for(c=1,j=i+1;j<s[j];j++){
+			if(s[i]==s[j]){
+				c++;
+				for(k=i;k<len;k++){
+					s[i]=s[i+1];
+					
+				}
+				
+			}
+			
+		}
+		printf("%c found %d times\n",s[i],c);
+	}
+	puts(s);
 }
