@@ -1,0 +1,42 @@
+
+C Program to Display All Characters Present in the Prime Position of a String.
+
+Test Data :
+
+Input a string : today is wednesday
+Output as : da sdey
+
+==========================================================================================================================
+ Reverse All the Vowels
+1 point
+
+Write a C program to reverse all the vowels present in a given string. Return the newly created string
+
+or modified string .
+
+Test Data :
+
+Input a string: Aeroplane
+
+Output as : earoplenA
+
+==========================================================================================================================
+Write a C program to reverse Words of the Given String?
+
+Ex: Today is Monday
+
+Output: yadoT si yadnoM
+==========================================================================================================================
+C Program to Remove Characters in Second String which are present in First String.
+
+Test Data :
+
+Input 1st string: apple
+
+Input 2nd string: aeroplane
+
+Output as : ron
+==========================================================================================================================
+
+
+
