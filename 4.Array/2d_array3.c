@@ -18,19 +18,19 @@ int main(){
 	}   */
 //Matrix multiplication
 	
-	int a[10][10],b[10][10],r,c,k,i,nc,nr;
+	int a[10][10],b[10][10],r,c,k,sum=0,nc,nr;
 	printf("Enter the no of rows and columns: ");
 	scanf("%d %d",&nr,&nc);
 	printf("Enter the number of rows and colums for 1st matrix:");
 	for(r=0;r<nr;r++){
 		for(c=0;c<nc;c++){
-			scanf("%d",a[r][c]);
+			scanf("%d",&a[r][c]);
 		}
 	}
 	printf("Enter the number of rows and colums for 2nd matrix:");
 	for(r=0;r<nr;r++){
 		for(c=0;c<nc;c++){
-			scanf("%d",a[r][c]);
+			scanf("%d",&b[r][c]);
 		}
 	}
 	puts("first matrix");
@@ -42,8 +42,17 @@ int main(){
 	puts("second matrix");
 	for(r=0;r<nr;r++){
 		for(c=0;c<nc;c++){
-			printf("%2d",a[r][c]);
+			printf("%2d",b[r][c]);
 		}printf("\n");
+	}
+	for(r=0;r<nr;r++){
+		for(c=0;c<nr;c++){
+			for(sum=0,k=0;k<nr;k++){
+				sum+=a[r][k]*b[k][c];
+			}
+			printf("%d ",sum);
+		}
+		printf("\n");
 	}
 	
 }

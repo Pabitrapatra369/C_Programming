@@ -1,0 +1,320 @@
+MCQ's
+=====
+
+1.In C,string constants are the constants that are enclosed in a pair of_____.
+
+  A.double quote
+  B.parenthesis
+  C.single quote
+  D.bracket
+
+
+
+2.Consider the size of char(character) variables as one byte,what will be the size of the array  declared below ?
+  char array[]="Programming language";
+
+  A.11 Bytes
+  B.8 Bytes
+  C.20 Bytes
+  D.21 Bytes
+  
+ 
+
+3.What is the output of the code given below ?
+  #include<stdio.h>
+   int main()
+   {
+     char name[]="satellites";
+     int len;
+     int size;
+     len=strlen(name);
+     size=sizeof(name);
+     printf("%d",len*size);
+     return 0;
+   }
+
+   A.100
+   B.110
+   C.40
+   D.44
+   
+   
+
+4. Which of the following is illegal declaration in C language ?
+  
+   A.char *str="Raj is a research schollar";   
+   B.char str[25]="Raj is a research schollar";
+   C.char str[40]="Raj is a research schollar";
+   D.char[] str="Raj is a research schollar";
+
+   
+
+5. What is the output of the below code ?
+   #include<stdio.h>
+   void main()
+   {
+    
+   char str[20];
+   strcpy(str, "Hello");
+   strcat(str, " World");
+   printf("%s", str);
+
+   }
+
+   A.Hello
+   B.Hello World
+   C.HelloWorld
+   D.An error
+   
+   
+
+6. Which function is used to concatenate two strings in C?
+
+   A.strcat()
+   B.strconcat()
+   C.stradd()
+   D.stringcat()
+ 
+   
+
+7. what is the output of below code ?
+
+   #include<stdio.h>
+   #include<string.h>
+   int main()
+   {
+    char str1[20] = "Hello", str2[20] = " World";
+
+    printf("%s\n", strcpy(str2, strcat(str1, str2)));
+
+    return 0;
+   }
+
+   A.Hello
+   B.Hello
+   C.Hello World 
+   D.WorldHello
+
+ 
+
+8. Can strings in C be modified if they are initialized with a string literal?
+
+   A.Yes, always
+   B.No, never
+   C.Only if they are not constant
+   D.Only in some compilers
+
+   
+
+9. Determine ourput :
+ 
+   #include<stdio.h>
+   void main()
+   {
+     int i=abc(10);
+     printf("%d",--i);
+   }
+   
+   int abc(int i)
+   {
+     return(i++);
+   }
+ 
+   A.10
+   B.9 
+   C.11
+   D.error
+
+   
+
+10.How do you call a function named myFunction with two arguments in c ?
+
+   A.myFunction(5,  10);
+   B.myFunction();
+   C.myFunction(5)(10);
+   D.myFunction[5,10]
+
+   
+
+11.What is a function paremeter in c ?
+  
+   A.A value passed to a function when it's called
+   B.A variable declared within a function
+   C.A researved keyword
+   D.A global variable
+  
+   
+
+12.How can you declare  a function in C that takes a variable number of arguments ?
+
+   A.Using the 'variable' keyword
+   B.Using the 'args' keyword
+   C.Using '...' notation
+   D.Using the 'varargs' keyword
+
+   
+
+13.What is the result of the expression pow(2,3) in c,assuming proper inclusion of the math library ?
+  
+   A.5
+   B.8.0
+   C.6
+   D.8
+
+
+
+14.What will hapen after compilling and running following code ?
+   
+   #include<stdio.h>
+   main()
+   {
+     printf("%p",main);
+   }
+
+   A.Error
+   B.Will make an infinite loop
+   C.Some address will be printed
+   D.None of these
+
+  
+15.Use of functions
+
+   A.Helps to avoid repeating a set of statements many times.
+   B.Enhances the logical clarity of the program.
+   C.Helps to avoid repeated programs across programs.
+   D.Makes the debugging task easier.
+   E.All of the above.
+
+ 
+
+ ===============================================================
+
+ 1)Write a program in C to print all perfect numbers in a given range between 1 to 100 using the function.
+   Take a function name as "printPerfactNo" which takes two argument's and print all perfact no's between them.
+
+   Expected Output :
+   The perfect numbers between 1 to 100 are :                                      
+   6   28 
+
+ 2)Write a program in C to check whether two given strings are an anagram or not.
+   Take a function named "isAnagramString" which takes two strings as argument and check it is anagram or not 
+   and returns boolean value.If both strings are anagram it should return true otherwise false.
+   And print proper message based on that boolean value in main function.
+	
+    Input the first String : spare
+    Input the second String : pears
+    
+    Expected Output :
+    pares and pears are Anagram.
+ 
+
+  3)Write a program in C to find the sum of the lower triangular elements of a matrix.
+    The given array is :
+
+		1 2 3
+
+		4 5 6
+
+		7 8 9
+
+    The elements being summed of the lower triangular matrix are: 4 7 8
+
+    The Sum of the lower triangular Matrix Elements are: 19
+====================
+  4)Write a C program to reverse all the vowels present in a given string.
+   Take a function named "reverseVowelString" which takes one stirng as an argument and prints the string where
+   vowels are reversed.
+
+   Test Data :
+   Input a string: AEIou
+
+   Expected Output: uoIEA
+ans-
+#include<stdio.h>
+#include<string.h>
+int isPerfect(int  n){
+	int i,j,sum=0;
+	for(i=1;i<=n/2;i++){
+		if(n%i==0)sum+=i;
+	}
+	if(sum==n)return 1;
+	return 0;
+}
+int isanagram(char s1[],char s2[]){
+	int i,j,c=0,len;
+	for(i=0;s1[i];i++);len=i;
+	for(i=0;s1[i];i++){
+		for(j=0;s2[j];j++){
+			if(s1[i]==s2[j]){
+				c++;
+				s1[i]=-1;
+			}
+		}
+	}
+	printf("%d - %d",c,len);
+	if(len==c)return  1;
+	return 0;
+}
+int isVowel(char c){
+	if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')return 1;
+	return 0;
+}
+void reverseVowel(char s[]){
+	int i,j,len;
+	for(i=0;s[i];i++);len=i;
+	for(i=0,j=len-1;i<j;){
+		if(isVowel(s[i])&&isVowel(s[j])){
+			s[i]=s[i]+s[j];
+			s[j]=s[i]-s[j];
+			s[i]=s[i]-s[j];
+			i++;
+			j--;
+			//puts(s);
+		}
+		else if(isVowel(s[i])==1&& isVowel(s[j])==0)j--;
+		else if(isVowel(s[i])==0&& isVowel(s[j])==1)i++;
+		else {
+			i++;
+			j--;
+		}
+	}
+	puts(s);
+}
+int main()
+{
+//	int a,b,i,j;
+//    printf("Enter the range start and end");
+//    scanf("%d%d",&a,&b);
+//	for(i=a;i<=b;i++){
+//		if(isPerfect(i))printf("%d ",i);
+//	}
+//anagram
+//	char s1[100],s2[100];
+//	gets(s1);gets(s2);
+//	isanagram(s1,s2)==1?printf("anagram"):printf("not anagram");
+//    return 0;
+//2d array lower tringle sum
+//	int a[10][10],r,i,j;
+//	puts("Enter the row and col of the array :");
+//	scanf("%d",&r);
+//	puts("Enter the elements");
+//	for(i=0;i<r;i++){
+//		for(j=0;j<r;j++){
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	int sum=0;
+//	puts("matrix is");
+//	for(i=0;i<r;i++){
+//		for(j=0;j<r;j++){
+//			if(i>j)sum+=a[i][j];
+//		
+//	}
+//	}
+//		printf("sum is%d ",sum);
+//reverse vowels present in a given string
+		char s[100];
+		gets(s);
+		reverseVowel(s);
+	
+}
